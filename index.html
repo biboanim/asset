@@ -1,58 +1,266 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Bibo Toys</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bibo Anim Landing Page</title>
   <style>
-    body{
-      font-family: Arial;
-      background:#111;
-      color:white;
-      text-align:center;
-      padding:40px;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
     }
 
-    .card{
-      max-width:400px;
-      margin:auto;
-      background:#222;
-      border-radius:20px;
-      padding:20px;
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f8fb;
+      color: #0b1b3a
     }
 
-    img{
-      width:100%;
-      border-radius:15px;
+    img {
+      max-width: 100%;
+      display: block
     }
 
-    .btn{
-      display:block;
-      margin-top:15px;
-      padding:15px;
-      background:#ff4757;
-      color:white;
-      text-decoration:none;
-      border-radius:10px;
-      font-weight:bold;
+    .container {
+      width: min(1200px, 92%);
+      margin: 0 auto
+    }
+
+    header {
+      padding: 24px 0
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 800
+    }
+
+    .logo span {
+      color: #2563eb
+    }
+
+    .hero {
+      text-align: center;
+      padding: 10px 0 32px
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 7vw, 6rem);
+      line-height: .95;
+      font-weight: 900
+    }
+
+    .hero h1 span {
+      color: #2563eb
+    }
+
+    .hero p {
+      margin-top: 18px;
+      font-size: clamp(1rem, 2vw, 1.6rem);
+      color: #5b6780
+    }
+
+    .products {
+      display: grid;
+      gap: 24px;
+      padding-bottom: 40px
+    }
+
+    .card {
+      border-radius: 28px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.1fr 1.4fr;
+      min-height: 520px
+    }
+
+    .card.blue {
+      background: linear-gradient(90deg, #031427, #0d3b66)
+    }
+
+    .card.green {
+      background: linear-gradient(90deg, #0d3d16, #3aa34b)
+    }
+
+    .content {
+      padding: 40px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, .15);
+      padding: 10px 16px;
+      border-radius: 12px;
+      font-weight: 700;
+      margin-bottom: 24px
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 4.5rem);
+      line-height: .95;
+      margin-bottom: 20px
+    }
+
+    .desc {
+      font-size: 1.4rem;
+      line-height: 1.5;
+      margin-bottom: 24px;
+      color: rgba(255, 255, 255, .92)
+    }
+
+    ul {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+      margin-bottom: 32px
+    }
+
+    li {
+      font-size: 1.15rem
+    }
+
+    .btn {
+      display: inline-block;
+      background: #2563eb;
+      color: #fff;
+      text-decoration: none;
+      padding: 20px 36px;
+      border-radius: 18px;
+      font-size: 1.5rem;
+      font-weight: 800;
+      text-align: center;
+      width: min(260px, 100%)
+    }
+
+    .green .btn {
+      background: #2dbb36
+    }
+
+    .visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px
+    }
+
+    .visual img {
+      max-height: 100%;
+      object-fit: contain
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px 0 40px;
+      text-align: center;
+      color: #22314f
+    }
+
+    .feature {
+      padding: 16px
+    }
+
+    .feature h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px
+    }
+
+    @media (max-width: 900px) {
+      .card {
+        grid-template-columns: 1fr;
+        min-height: auto
+      }
+
+      .content {
+        order: 2;
+        padding: 28px
+      }
+
+      .visual {
+        order: 1;
+        padding: 20px
+      }
+
+      .desc {
+        font-size: 1.1rem
+      }
+
+      li {
+        font-size: 1rem
+      }
+
+      .features {
+        grid-template-columns: 1fr
+      }
     }
   </style>
 </head>
 
 <body>
-
-<div class="card">
-  <h1>Spider-Man Mini Blocks</h1>
-
-  <img src="spiderman.jpg">
-
-  <p>Tiny Marvel figures collection.</p>
-
-  <a class="btn"
-     href="YOUR_AFFILIATE_LINK">
-     Buy Now
-  </a>
-
-</div>
-
+  <header class="container">
+    <div class="logo">Bibo <span>Anim</span></div>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <h1>BUILD YOUR<br><span>ADVENTURE</span></h1>
+      <p>Premium building blocks. Endless imagination.</p>
+    </section>
+    <section class="products">
+      <article class="card blue">
+        <div class="content">
+          <div class="badge">SET 01</div>
+          <h2>MECH<br>WARRIOR</h2>
+          <p class="desc">Assemble your own mech and gear up for adventure.</p>
+          <ul>
+            <li>Posable Design</li>
+            <li>High Quality Pieces</li>
+            <li>8+ Ages</li>
+          </ul>
+          <a href="#" class="btn">GET IT</a>
+        </div>
+        <div class="visual">
+          <img src="images/mech-warrior.png" alt="Mech Warrior">
+        </div>
+      </article>
+      <article class="card green">
+        <div class="content">
+          <div class="badge">SET 02</div>
+          <h2>CITY<br>BUILDER</h2>
+          <p class="desc">Build your own city and bring it to life.</p>
+          <ul>
+            <li>Modular City Design</li>
+            <li>Compatible with Major Brands</li>
+            <li>6+ Ages</li>
+          </ul>
+          <a href="#" class="btn">GET IT</a>
+        </div>
+        <div class="visual">
+          <img src="images/city-builder.png" alt="City Builder">
+        </div>
+      </article>
+    </section>
+    <section class="features">
+      <div class="feature">
+        <h3>Safe & Durable</h3>
+        <p>Premium materials built to last.</p>
+      </div>
+      <div class="feature">
+        <h3>Great Gift</h3>
+        <p>Perfect for builders of all ages.</p>
+      </div>
+      <div class="feature">
+        <h3>Creative Play</h3>
+        <p>Fun, educational, and imaginative.</p>
+      </div>
+    </section>
+  </main>
 </body>
+
 </html>
